@@ -49,9 +49,15 @@ public class UserController {
 
     // 회원 가입 요청 처리
     @PostMapping("/user/signup")
-    public String registerUser(SignupRequestDto requestDto) {
-        userService.registerUser(requestDto);
-        return "redirect:/";
+    public String registerUser(SignupRequestDto requestDto, Model model) {
+        try {
+            userService.registerUser(requestDto);
+        }catch (IllegalArgumentException e){
+            System.out.println(e);
+            model.addAttribute("message", e.getMessage());
+            return "signup";
+        }
+        return "redirect:/user/login";
     }
 
     //인가받지 않은 사용자가 허용되지 않은 페이지 접근 시 아래를 리턴

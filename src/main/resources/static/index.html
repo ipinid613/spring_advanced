@@ -7,7 +7,7 @@
     <meta property="og:title" content="Cheers Mate!">
     <meta property="og:description" content="응원하는 문화를 만듭니다.">
     <meta property="og:image" content="image/ogimage.png">
-    <title>Cheers Mate! | 응원하는 문화를 만듭니다</title>
+    <title>Cheers | 응원하는 문화를 만듭니다</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -37,12 +37,14 @@
         <div id="header-title-select-shop">
             <p>응원해주고, 응원받는 문화를 만들어요!</p>
         </div>
+        <div class="logout" onclick="location.href='/user/logout'">
+            로그아웃
+        </div>
+        <div class="col text-center">
+            <button type="button" class="btn btn-info" onclick="location.href='/write'">응원 작성하기</button>
+        </div>
+        <div id="cards-box" class="area-read">
+        </div>
     </div>
-    <div class="col text-center">
-        <button type="button" class="btn btn-info" onclick="location.href='/write'">응원 작성하기</button>
-    </div>
-    <div id="cards-box" class="area-read">
-    </div>
-</div>
 </body>
 </html>

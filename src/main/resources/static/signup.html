@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/loginsignup.css">
   <meta charset="UTF-8">
-  <title>회원가입 페이지</title>
+  <title>Cheers | 회원가입</title>
   <script>
     function onclickAdmin() {
       // Get the checkbox
@@ -24,21 +24,33 @@
         box.style.display = "none";
       }
     }
+
+    function isValidUsername(contents) {
+      if (contents == '') {
+        alert('내용을 입력해주세요');
+        return false;
+      }
+      if (contents.trim().length > 140) {
+        alert('공백 포함 140자 이하로 입력해주세요');
+        return false;
+      }
+      return true;
+    }
   </script>
 </head>
 <body>
 <div id="login-form" class="login-form">
-  <div id="login-title" class="login-title">Sign up Select Shop</div>
+  <div id="login-title" class="login-title">Cheers 회원가입</div>
 
   <form action="/user/signup" method="post">
-    <div class="login-id-label">Username</div>
-    <input type="text" name="username" placeholder="Username" class="login-input-box">
+    <div class="login-id-label">아이디</div>
+    <input type="text" name="username" placeholder="아이디를 입력하세요." class="login-input-box">
 
-    <div class="login-id-label">Password</div>
-    <input type="password" name="password" class="login-input-box">
+    <div class="login-id-label">비밀번호</div>
+    <input type="password" name="password" placeholder="비밀번호를 입력하세요." class="login-input-box">
 
-    <div class="login-id-label">E-mail</div>
-    <input type="text" name="email" placeholder="E-mail" class="login-input-box">
+    <div class="login-id-label">이메일</div>
+    <input type="text" name="email" placeholder="이메일을 입력하세요." class="login-input-box">
 
     <div>
       <input id="admin-check" type="checkbox" name="admin" onclick="onclickAdmin()" style="margin-top: 40px;">관리자

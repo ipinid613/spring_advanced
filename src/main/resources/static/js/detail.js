@@ -19,7 +19,8 @@ function getPostDetail(id) {
             $('#cards-box').append(tempHtml)
         },
         error: function () {
-            alert("데이터를 조회하는데 실패 했습니다.")
+            alert("데이터를 조회하는데 실" +
+                "패 했습니다.")
         }
     })
 }
@@ -141,3 +142,5 @@ function hideEdits(id) {
     $(`#${id}-contents`).show();
     $(`#${id}-edit`).show();
 }
+
+///////////////////댓글관련///////////////////////
