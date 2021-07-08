@@ -27,8 +27,13 @@
     font-style: normal;
     line-height: 1;
     letter-spacing: -0.96px;
-    text-align: left;
+    text-align: center;
     color: #212529;
+}
+.login-title h5{
+    font-size: 15px;
+    text-align: center;
+    font-family: SpoqaHanSansNeo;
 }
 
 .login-kakao-btn {
